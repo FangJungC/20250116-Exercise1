@@ -1,20 +1,20 @@
-let todoArray = [];
-let btnAdd = document.getElementById("addButton");
+//找DOM
+let increment = document.getElementById("increment");
+let decrement = document.getElementById("decrement");
+let reset = document.getElementById("reset")
+let counter=document.getElementById("counter");
 
-function onBtnClick() {
-    // alert("準備處理");
+//綁事件
+increment.addEventListener("click", onIncrementCLick);
+decrement.addEventListener("click", onDecrementCLick);
+reset.addEventListener("click", onResetCLick);
 
-    //抓INPUT資料
-    let input = document.getElementById("todoInput").value;
-
-    //將資料儲存到ARRAY備用
-    todoArray.push(input);
-
-    //取得todoList裡面的HTML（innerHTML）
-    let html = document.getElementById("todoList").innerHTML;
-    html += "<li>" + input + "</li>"; //組合新的html，並用+=加在後面
-    document.getElementById("todoList").innerHTML = html;  //
+//寫事件
+function onIncrementCLick() {
+    //3.1 找值
+    //3.2 改
+    counter+=1;
+    //3.3 放回
 
 }
 
-btnAdd.addEventListener("click", onBtnClick);
